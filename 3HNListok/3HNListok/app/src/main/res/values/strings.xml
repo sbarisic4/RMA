@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">3HNListok</string>
+    <string name="title_home">Home</string>
+    <string name="title_results">Results</string>
+    <string name="add_game">Add game</string>
+    <string name="finish_game">Finish game</string>
+    <string name="update_game">Update game</string>
+    <string name="cancel">Cancel</string>
+    <string name="pick_date">Pick a date</string>
+    <string name="pick_game_date">Pick game date</string>
+    <string name="hour">Hour</string>
+    <string name="minute">Minute</string>
+    <string name="valid_minute_required">Valid minute required</string>
+    <string name="valid_hour_required">Valid hour required</string>
+    <string name="valid_goals_required">Valid goals required</string>
+    <string name="colon">:</string>
+    <string name="goals">Goals</string>
+    <string name="change_game_result">Change game result</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="location">Location</string>
+    <string name="host_football_team_is">Host football team is %1s</string>
+    <string name="pick_valid_teams">Pick valid teams</string>
+</resources>

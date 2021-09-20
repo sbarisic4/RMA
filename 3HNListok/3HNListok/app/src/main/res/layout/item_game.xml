@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="game"
+            type="com.stjepanbarisic.a3hnlistok.data.models.persistence.GameWithFootballTeams" />
+
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/linearLayoutGame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/padding_small"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvStartTime"
+                style="@style/ListText"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:textAlignment="textStart"
+                tools:text="0" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvHostTeamName"
+                style="@style/ListText"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:text="@{game.getHostFootballTeam().name}"
+                android:textAlignment="center" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvHostTeamGoals"
+                style="@style/ListText"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textAlignment="center"
+                tools:text="0" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvColon"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="@dimen/margin_small"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/colon"
+                android:textSize="@dimen/text_size_extra_large" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvGuestTeamGoals"
+                style="@style/ListText"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textAlignment="center"
+                tools:text="0" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvGuestTeamName"
+                style="@style/ListText"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:text="@{game.getGuestFootballTeam().name}"
+                android:textAlignment="center" />
+
+        </LinearLayout>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnFinishGame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_large"
+            android:text="@string/finish_game"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayoutGame" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnLocationOfGame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_large"
+            android:text="@string/location"
+            app:layout_constraintBottom_toBottomOf="@+id/btnFinishGame"
+            app:layout_constraintEnd_toStartOf="@id/btnFinishGame"
+            app:layout_constraintTop_toTopOf="@id/btnFinishGame" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
